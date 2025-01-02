@@ -1,6 +1,7 @@
 import random
 from typing import List
 
+
 class Card:
     def __init__(self, value, suit) -> None:
         self.value = value
@@ -9,12 +10,13 @@ class Card:
     def __repr__(self) -> str:
         return f"{self.value} {self.suit}"
 
+
 class DeckFactory:
-    def __init__(self, num_decks = 6) -> None:
+    def __init__(self, num_decks=6) -> None:
         self.num_decks = num_decks
         self.cards: List[Card] = []
 
-        self.values = list(range(2,15))
+        self.values = list(range(2, 15))
         self.suits = ["clubs", "diamonds", "spades", "hearts"]
         self.face_cards = {
             11: "J",
@@ -28,7 +30,6 @@ class DeckFactory:
         }
 
         self._create_shuffled_deck()
-
 
     def draw_card(self) -> Card:
         if len(self.cards) == 0:

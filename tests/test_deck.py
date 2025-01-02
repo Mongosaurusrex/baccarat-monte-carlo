@@ -1,6 +1,7 @@
 import unittest
 from utils.deck import DeckFactory, Card
 
+
 class TestDeckFactory(unittest.TestCase):
     def setUp(self):
         self.deck_factory = DeckFactory(num_decks=1)
@@ -44,6 +45,7 @@ class TestDeckFactory(unittest.TestCase):
     def test_card_string_representation(self):
         card = Card("A", "hearts")
         self.assertEqual(repr(card), "A hearts")
+
 
 if __name__ == "__main__":
     unittest.main()
